@@ -1,0 +1,256 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+/*footer için eklendi*/
+html,
+body {
+ height: 100%
+}
+/*Arkaplan resmini ayarlama*/
+/*background body içinde tanımlanmazsa sağdan ve alttan bazı hatalar verir.*/
+body
+{
+    background: url(BARTIN.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    /*footer da ki hata yüzünden eklendi*/
+    display: flex;
+    flex-direction: column;
+}
+/* iki nokta arasına boşluk koyuyoruz.Yani(.container(BOŞLUK).navbar)*/
+.navbar
+{
+    height: 80px;
+    background: rgba(0,0,0,0.6);
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+/*logo konumunu hizalama*/
+.navbar .logo
+{
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+/*yazılar sağ kenara değmesin*/
+.navbar ul
+{
+    float: right;
+    margin-right: 20px;
+}
+/*yazıların aralıklarını ayarlama*/
+.navbar ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 80px;
+}
+/*yazıların stillerini ayarlıyoruz*/
+.navbar ul li a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 13px;
+    transition: 0.5s;
+}
+/*yazıların üzerine gelindiğindeki ayarlar*/
+.navbar ul li a.active,
+.navbar ul li a:hover
+{
+    background: #fd7754;
+    border-radius: 20px;
+}
+/*Başlık yazısının stillerini ayarlıyoruz*/
+.başlık h1
+{
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+    font-size: 50px;
+}
+/*center içindeki yazıları genel bir konuma bağlıyoruz*/
+.center
+{
+    position: relative;
+    float: left;
+    margin-left: 200px;
+    margin-right: 100px;
+}
+/*yazı stili*/
+.center .konubaşlığı p
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+/*yazı stili*/
+.center ol li a
+{
+    font-size: 25px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+/*madde işaretlerinin stili*/
+.center ol
+{
+    color: white;
+    font-size: 25px;
+}
+/*Tıklanmamış linklerin ayarları*/
+a:link
+{
+    color: white;
+}
+/*Tıklanmış linklerin ayarları*/
+a:visited
+{
+    color: white;
+}
+/*Linkin üzerinde gelindiğinde ki ayarlar*/
+a:hover
+{
+    color: red;
+}
+/*Linkin üzerine tıklandığındaki ayarlar*/
+a:active
+{
+    color: rgb(0,255,255);
+}
+/*konu alanı ile alakalı ayarlar*/
+.konu
+{
+    background-color: rgba(0,0,0,0.6);
+}
+/*Konu başlığının ayarları*/
+.center .konu p font
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+}
+/*Konu yazısnın ayarları*/
+.center .konu p
+{
+    font-size: 25px;
+    color: white;
+    padding-bottom: 5%;
+}
+/*ilçe başlıklarının ayarları*/
+.konu p rakam
+{
+    color: rgb(0,255,255);
+}
+/*meşhur lezzetlerinde sırasız liste ayarları*/
+.konu ul
+{
+    font-size: 25px;
+    color: white;
+    padding-bottom: 5%;
+}
+/*başlık ayarları*/
+.ayrıca h1
+{
+    font-size: 50px;
+    color: white;
+}
+/*liste ayarları*/
+.ayrıca ul
+{
+    font-size: 25px;
+    color: white;
+}
+/*başlık ayarları*/
+.resim h2
+{
+    color: white;
+}
+/*çerçeve alanını ayarlama*/
+.cerceve
+{
+    width: 100%;
+    overflow: hidden;
+    border: 3px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*galerinin özelliklerini ayarlama*/
+.galeri
+{
+    position: relative;
+    width: 1500%;
+    left: 0;
+    animation: 16s slayt infinite;
+}
+/*resimlerin özelliklerini ayarlama*/
+.galeri img
+{
+    width: 350px;
+    height: 300px;
+    float: left;
+}
+/*animasyon süresini ayarlama*/
+@keyframes slayt 
+{
+    5%{left: 0%;}
+    10%{left: 0%;}
+    15%{left: -50%;}
+    20%{left: -50%;}
+    25%{left: -100%;}
+    30%{left: -100%;}
+    35%{left: -150%;}
+    40%{left: -150%;}
+    45%{left: -200%;}
+    50%{left: -200%;}
+    55%{left: -250%;}
+    60%{left: -250%;}    
+    65%{left: -300%;}
+    70%{left: -300%;}
+    75%{left: -350%;}
+    80%{left: -350%;}
+    85%{left: -400%;}
+    90%{left: -400%;}
+}
+/*başa dön buton ayarları*/
+.yukari img
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    background-color: rgba(128,128,128,0.5);
+    border-radius: 50px;
+}
+/*footer ın ayarları*/
+footer
+{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+    border-top: 1px solid white;
+    /*footer ın sayfanın başında gözükmesi 
+    ile oluşan hatanın çözümü*/
+    flex-grow: 1;
+}
+/*copyright yazı ayarları*/
+.kutu .copyright
+{
+    color: white;
+    font-size: 20px;
+}
+/*design yazı ayarları*/
+.kutu .design
+{
+    color: black;
+    font-size: 25px;
+    text-decoration: overline;
+}
